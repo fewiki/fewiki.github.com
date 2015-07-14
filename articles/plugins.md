@@ -21,5 +21,5 @@
 > 插件众多  
 
 - [semantic-ui 官网](http://www.semantic-ui.com/) 
-> 插件众多  
+> 插件众多  不错
  
