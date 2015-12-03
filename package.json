@@ -1,0 +1,19 @@
+{
+  "name": "gulp-tasks",
+  "version": "0.0.0",
+  "dependencies": {
+    "compression": "^1.6.0",
+    "express": "^4.13.3",
+    "serve-static": "^1.10.0"
+  },
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.1.0",
+    "gulp": "^3.8.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "baseWeb"
+  },
+  "author": "lgzhang08@tfedu.net",
+  "license": "tfedu"
+}
