@@ -23,7 +23,8 @@ ionic.js对AngularJS进行了扩展，它的主要贡献是将移动端开发中
     </ion-tabs>
 ionic.js实现的指令基本覆盖了移动端开发所需，下面的图可以帮助我们快速简要地了解 ionic.js的能力：
 
-001.png
+![ionic](http://r.ionichina.com/FvBSWobcmO8-vOlcJcg847WhF3b8)
+
 
 ionic.js : 路由管理
 
@@ -31,7 +32,8 @@ ionic.js : 路由管理
 
 ui-router的核心理念是将子视图集合抽象为一个状态机，导航意味着 状态的切换。在不同的状态下，ionic.js渲染对应的子视图（动态加载的HTML片段） 就实现了路由导航的功能：
 
-002.png
+![ionic](http://r.ionichina.com/FpW5o8kIAsN4mUaKKO7tlshb6QNa)
+
 
 ionic.js : 手势支持
 
