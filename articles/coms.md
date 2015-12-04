@@ -1,6 +1,7 @@
 # 知好乐前端组件化规范
 标签： 组件化
 组件库：http://git.tfedu.net/tfedu-web/tfedu-frontend-coms
+组件库网址：http://219.239.146.211:9000
 
 ---
 ## 1 样式组件化
