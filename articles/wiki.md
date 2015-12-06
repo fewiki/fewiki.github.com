@@ -5,8 +5,9 @@
 	前端测试服务器 http://m.tfedu.net
 
 ##git使用
+
 > [git配置和使用说明](http://git.tfedu.net/lgzhang/git_start "git配置和使用说明")
-> 
+
 > [git演示动画](http://git.tfedu.net/lgzhang/git-quick-start)
 
 > [pro git中文版：最全面的git教程](http://iissnan.com/progit/)
@@ -32,7 +33,7 @@
 
 ##前端知识体系
 > [http://ecomfe.duapp.com](http://ecomfe.duapp.com)
-> 
+
 > [github源码](https://github.com/ecomfe/knowledge)
 
 ##前端解决方案
