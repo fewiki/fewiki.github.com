@@ -12,3 +12,5 @@
 ##JavaScript开发规范要求
 - http://blog.jobbole.com/30854/
 
+##前端开发笔记本
+- [Frontend Guidelines](https://li-xinyang.gitbooks.io/frontend-notebook)
