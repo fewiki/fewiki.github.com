@@ -108,6 +108,7 @@ project
  - modules.less 引入
  - less命名以page模块打头，保证和page命名的一致性
  - 非公用的less尽量在页面里用 当前页面id打头，这样好定位，也保证不与其他css冲突
+ - 能用字体图标咱们就用，三个字，方便啊
  
  
 ## 3.3 html规范
