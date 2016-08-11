@@ -30,4 +30,7 @@
 - [semantic-ui 官网](http://www.semantic-ui.com/) 
 > 插件众多
 
+## 前端常用插件汇总
+https://github.com/iamjoel/front-end-plugins
+
 ==============================================
