@@ -10,6 +10,7 @@
 [前端优化](articles/perfect.md)
 [前端概要设计](articles/design.md)
 [前端月汇报](articles/month-report.md)
+[知好乐JS SDK使用说明](articles/js-sdk.md)
 
 <!-- [gimmick:Disqus](markdowniowiki) -->
 
