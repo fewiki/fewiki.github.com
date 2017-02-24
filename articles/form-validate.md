@@ -96,4 +96,154 @@ if(!(/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.test($scope.authorMsg.email))) {
 
 ##表单中的接口调用、验证信息
 
+###3.接口函数的封装、调用		实现 保存=>更新=>发布 接口
+
+```
+// 保存接口
+saveAppEdit: async function(index,realpackagepath,screenshot) {
+	let paramsJson = {
+		appicon: this.appIcon,
+		......
+	}
+	let tmpData = await AppEditApi.saveAppEdit(paramsJson)
+	let resData = await tmpData.json()
+	console.log(resData)
+	if(resData.code == 'error') {
+		this.$alert(resData.message)
+		return;
+	}
+	if(resData.code == 'OK') {
+		var appid = resData.data.appid
+		console.log(appid)
+		//调用更新标签接口
+		this.getAppLabel(appid,this.labelIds);
+		if(index==1){
+			this.$alert("应用保存成功！")
+			// 跳转到列表页面
+			setTimeout(function(){
+				window.location.href = '#appList'
+			}, 500)
+		}
+		if(index==2){
+			if(this.applicationTypes ==1){
+				// 发布接口
+				this.publishBaseApp(appid);
+			}else{
+				// 跳转到定制应用发布页面
+				setTimeout(function(){
+					window.location.href = '#AppRelease/' + appid
+				}, 500)
+			}
+		}
+	}
+},
+```
+```
+// 更新标签接口
+getAppLabel: async function(appid,labelIds) {
+	let paramsJson = {
+		appid:appid,
+		labelIds: labelIds,
+	}
+	let tmpData = await AppEditApi.getAppLabel(paramsJson)
+	let resData = await tmpData.json()
+	console.log(resData)
+	if(resData.code == 'OK') {
+		this.$alert("标签更新成功！")
+	}
+},
+```
+```
+// 发布接口
+publishBaseApp: async function(appid) {
+	let paramsJson = {
+		appid: appid
+	}
+	let tmpData = await AppEditApi.publishBaseApp(paramsJson)
+	let resData = await tmpData.json()
+	console.log(resData)
+	if(resData.code == 'OK') {
+		this.$alert("应用发布成功！")
+		// 跳转到列表页面
+		setTimeout(function(){
+			window.location.href = '#appList'
+		}, 500)
+	}
+}
+```
+
 ##表单中的逻辑处理
+
+###4.vue中props用于父组件向子组件传值
+
+```
+//上传
+//<UploadFile ref="subset" :fileSize="'10MB'" :fileFormat="'mp3'"></UploadFile>
+export default {
+	props: ['fileSize', 'fileFormat'],
+	data() {
+	}
+}
+
+this.subjectId = this.$refs.subset.subjectId,
+this.$parent.displayDelete = true;
+```
+
+###5.vue中$emit用于子组件向父组件传值
+
+```
+//上传APK成功
+uploadSuccess: function(file){
+	$sessionJsonStorage.set('appInfo', file[0]);
+	// 向上广播 上传成功了
+	eventHub.$emit('appUploaded', 'OK')
+	this.fullscreenLoading = false;
+},
+```
+```
+// 获取apk基本信息 包括： 新建 或 编辑
+created () {
+	this.appInfo = $sessionJsonStorage.get('appInfo')
+	console.log(this.appInfo)
+	// 赋值
+	......
+},
+```
+
+###6.多个循环、判断 嵌套使用
+
+```
+//初始分值、复合题分值
+currentScore :function(tmpList) {
+	tmpList.forEach( ( item, i ) => {
+		tmpList[i].score = parseInt(100/(this.total));
+		tmpList[i].missedScore = 0;
+		//复合题 
+		if(tmpList[i].questypetemp == 5) {
+			// 复合题 score 赋初值
+			tmpList[i].subQuestionList.forEach( ( sub, j ) => {
+				tmpList[i].subQuestionList[j].score = parseInt(100/(this.total));
+			})
+			//复合题总分累加 分值
+			for(let j = 0; j < tmpList[i].subQuestionList.length-1 > 0; j++) {
+				this.totalScore = this.totalScore + parseInt(100/(this.total));
+			}
+			//复合题和 分数初值
+			tmpList[i].eScore = tmpList[i].subQuestionList.length * parseInt(100/(this.total));
+		}
+		//最后一题加余数
+		if(i == tmpList.length-1){
+			//复合题 最后一题加余数
+			if(tmpList[i].questypetemp == 5) {
+				tmpList[i].subQuestionList[tmpList[i].subQuestionList.length-1].score += 100%this.total;
+				tmpList[i].eScore += 100%this.total;
+				this.totalScore += 100%this.total;
+			}else{
+				tmpList[i].score += 100%this.total;
+			}
+		}
+		this.totalScore += parseFloat(tmpList[i].score);
+	});
+},
+```
+
