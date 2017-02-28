@@ -12,3 +12,18 @@
 		09-01至02-29（上学期）；03-01至08-31（下学期）
 ##3.点击弹框之外的其他区域，将弹框隐藏
 		onclick-outside组件
+   参考
+    https://github.com/egoist/onclick-outside
+##4.watch方法如果data是数组或对象，其中的属性改变，不会被触发
+   可以使用ref;
+   html
+        <app-item :single-data="appItemList" ref="appitem"></app-item>
+   js
+        this.$refs.appitem.item = []
+		this.$refs.appitem.item = this.appItemList	//先置空，再重新赋值
+   子组件
+        watch: {
+			singleData:function(data){
+		    		this.item = data
+			   }
+			} 
