@@ -14,6 +14,7 @@
 [知好乐JS SDK使用说明](articles/js-sdk.md)
 [表单验证](articles/form-validate.md)
 [vuejs通用](articles/vuejs-func.md)
+[云课堂](articles/classroom/tech.md)
 
 <!-- [gimmick:Disqus](markdowniowiki) -->
 
