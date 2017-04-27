@@ -5,6 +5,7 @@
 > vue-router 2.0  http://router.vuejs.org/zh-cn/index.html
 > Element UI http://element.eleme.io/
 > fontawsome 字体图标  http://fontawesome.io/
+> iconfont 字体图标 http://www.iconfont.cn/
 > 用less编写css
 > es6 es7
 > 基于webpack自动刷新 打包
