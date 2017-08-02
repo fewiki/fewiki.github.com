@@ -1,4 +1,4 @@
-# 1. 知好乐前端angular web架构
+# 1. angular web架构
 
 - 基于angularjs MVC架构   https://angularjs.org/
 - 基于bootstrap响应式布局  http://v3.bootcss.com/
