@@ -1,4 +1,4 @@
-# 1. 知好乐前端vuejs web架构
+# 1. vuejs web架构
 
 > 基于vue-cli https://github.com/vuejs/vue-cli
 > 基于vue.js2.0 http://vuefe.cn/
