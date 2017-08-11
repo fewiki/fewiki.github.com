@@ -15,6 +15,7 @@
 [表单验证](articles/form-validate.md)
 [vuejs通用](articles/vuejs-func.md)
 [云课堂](articles/classroom/tech.md)
+[项目总结](project/project.md)
 
 <!-- [gimmick:Disqus](markdowniowiki) -->
 
