@@ -9,5 +9,5 @@ logo占位
 - 打造公司级别的前端规范
 
 
-[GitHub]()
+[GitHub](https://github.com/fewiki/fewiki.github.com)
 [Get Started](#readme)
