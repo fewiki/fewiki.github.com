@@ -49,8 +49,8 @@ hotfix/xxx
 - master的bug，直接在master中修正
 - release的bug，即正式环境的bug。不紧急的放下一版master统一处理，应该从小版本发布 测试 避免此类问题。实在很紧急，按以下办法处理：
 
-从release分支 切 分支 hotfix-bug 
-hotfix-bug --> release
+从release分支 切 分支 hotfix-bug,
+合并 otfix-bug --> release
 
-master分支 有这个bug 
-hotfix-bug --> master 有冲突解决一下
+master分支 如果也有这个bug 
+合并hotfix-bug --> master 有冲突解决一下
