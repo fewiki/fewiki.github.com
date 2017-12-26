@@ -9,7 +9,7 @@
 
 ## branch 和 tag
 
-每个repo有且仅有以下的 branch 和 tag。
+- 每个repo有且仅有以下的 branch 和 tag。
 
 ### Branch: master 、release 和 研发分支
 
@@ -32,11 +32,16 @@ hotfix/xxx
 
 ## 发布新版流程
 
-确保所有研发分支 都已经 merge 到 master；
-使用 master branch 的代码进行测试，如果发现 bug，把对应的 bugfix merge 到 master；
-合并 master 到 release branch；
-在 Jenkins 上从 release branch 发起新的 build 并发布；
-发布完成后在当前的 release branch 打上对应版本的 tag。
+- 确保所有研发分支 都已经 merge 到 master；
+
+- 使用 master branch 的代码进行测试，如果发现 bug，把对应的 bugfix merge 到 master；
+
+- 合并 master 到 release branch；
+
+- 发布完成后在当前的 release branch 打上对应版本的 tag。
+
+- 在 Jenkins 上从 release branch 发起新的 build 并发布；
+
 
 
 ## Bugfix 流程
