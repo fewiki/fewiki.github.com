@@ -7,11 +7,11 @@
 但涉及团队协作的方面需要有一些一致的规范，所以请大家务必遵守。
 ```
 
-## branch 和 tag
+## 1 branch 和 tag
 
 - 每个repo有且仅有以下的 branch 和 tag。
 
-### Branch: master 、release 和 研发分支
+#### Branch: master 、release 和 研发分支
 
 其中：
 
@@ -25,12 +25,12 @@ feature/xxx
 hotfix/xxx
 
 
-### Tag
+#### Tag
 
 - 对应每个发布版本的 tag。tab版本号与云平台版本一致，命名 cloud_版本号_日期，如：cloud_4.0_20171226
 
 
-## 发布新版流程
+## 2 发布新版流程
 
 - 确保所有研发分支 都已经 merge 到 master；
 
@@ -44,7 +44,7 @@ hotfix/xxx
 
 
 
-## Bugfix 流程
+## 3 Bugfix 流程
 
 - master的bug，直接在master中修正
 - release的bug，即正式环境的bug。不紧急的放下一版master统一处理，应该从小版本发布 测试 避免此类问题。实在很紧急，按以下办法处理：
