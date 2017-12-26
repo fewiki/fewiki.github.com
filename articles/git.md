@@ -14,11 +14,14 @@
 
 每个repo有且仅有以下的 branch 和 tag。
 
-Branch: master 和 release。其中 master 对应目前的开发分支，所有的 pull request 都应该发到这个分支。release 是当前发布的分支，在这个分支只能增加从 master cherrypick 过来的 commit。详见本文后面的说明。
+Branch: master 、release 和 研发分支。其中：
+- master 对应目前的开发分支，所有的 研发分支 需要合并到此分支。
+- release 是当前发布的分支，在这个分支只能增加从 master 发布 过来的 commit。详见本文后面的说明。
+- 研发分支需要master切出，然后开发完成后，提交合并请求到 master. 研发分支命名规范待补充。
 
-Tag: 对应每个发布版本的 tag。SDK 和应用程序的 tag 遵照 <major>.<minor>.<patch> 的命名，如 2.5.1；服务端程序的 tag 以发布的日期命名，如 2014.11.13，如果有 bugfix，则在后面增加小写字母，如 2014.11.13 后是 2014.11.13a，然后是 2014.11.13b。
+Tag: 对应每个发布版本的 tag。tab版本号与云平台版本一致，命名 cloud_版本号_日期，如：cloud_4.0_20171226
 
-目前还有部分 repo 包含多个独立部署的项目（如 uluru-platform）。在这样的 repo 打 tag 时需要附上项目名做前缀，如 bigquery-2.5.1。但我们需要逐步把这些项目拆分到独立的 repo。
+
 
 ## 发布新版流程
 
@@ -28,16 +31,8 @@ Tag: 对应每个发布版本的 tag。SDK 和应用程序的 tag 遵照 <major>
 在 Jenkins 上从 release branch 发起新的 build 并发布；
 发布完成后在当前的 release branch 打上对应版本的 tag。
 
+
 ## Bugfix 流程
 
-这里的 bugfix 指的是修复已经发布的程序（release branch）中的缺陷。master 里的 bug 请直接 merge bugfix 到 master。
-
-如果此缺陷在 master 中还存在，请先 merge bugfix 到 master，否则跳到下一步；
-在 release branch 从 master cherrypick 修复该缺陷的一个或多个 commit；
-在 Jenkins 上发布当前 release branch；
-发布完成后在当前的 release branch 打上递增的 tag。比如，如果上一个 tag 是 2.5.1，这个 tag 应该是 2.5.2；如果上一个是 2014.11.13，这个就是 2014.11.13a。
-其他
-
-并不是每个 bug 都有专门发布 bugfix 版的必要，对于不紧急的 bug，可以在 master 里 fix 后随下一个版本发布。
-
-在一个官方 repo 下只应该有以上说的 branch 和 tag，在开发过程中使用到的 feature branch 等请都放在个人的 fork，一律通过向 master 发 pull request 的方式给官方 repo 提交代码。
+- master的bug，直接在master中修正
+- release的bug，不紧急的放下一版master统一处理，紧急的 待补充，应该从小版本发布 测试 避免此类问题
