@@ -1,4 +1,5 @@
 [主页](index.md)
+[前端规范](articles/frontend-rules/frontend-rules.md)
 [研发流程](articles/process.md)
 [git规范](articles/git.md)
 [前端wiki](articles/wiki.md)
@@ -18,6 +19,8 @@
 [vuejs通用](articles/vuejs-func.md)
 [云课堂](articles/classroom/tech.md)
 [项目总结](project/project.md)
+
+[<img src="http://echarts.baidu.com/images/github.png" width="18">参与贡献](project/project.md)
 
 <!-- [gimmick:Disqus](markdowniowiki) -->
 
