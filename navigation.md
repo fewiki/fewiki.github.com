@@ -1,24 +1,8 @@
 [主页](index.md)
-[前端规范](articles/frontend-rules/frontend-rules.md)
-[研发流程](articles/process.md)
-[git规范](articles/git.md)
 [前端wiki](articles/wiki.md)
-[前端组件化](articles/coms.md)
-[代码规范](articles/rules.md)
-<!--[研发规范](articles/guide.md)-->
-[angularjs web架构](articles/angularjs.md)
-[vuejs web架构](articles/vuejs.md)
-<!--[移动端开发](articles/mobile.md) -->
+[公司相关](articles/company.md)
+[前端规范](articles/frontend-rules.md)
 [前端工具](articles/tools.md)
-[插件库](articles/plugins.md)
-[前端优化](articles/perfect.md)
-[前端概要设计](articles/design.md)
-<!-- [前端月汇报](articles/month-report.md) -->
-[JS SDK使用说明](articles/js-sdk.md)
-[表单验证](articles/form-validate.md)
-[vuejs通用](articles/vuejs-func.md)
-[云课堂](articles/classroom/tech.md)
-[项目总结](project/project.md)
 
 [<img src="http://echarts.baidu.com/images/github.png" width="18">参与贡献](project/project.md)
 
