@@ -1,4 +1,4 @@
-# React 脚手架构 
+# React-cli 脚手架 
 （请在知识库中查看，效果更佳 https://fewiki.github.io/#!articles/rules/react-cli.md）
 
 ## 架构内容
