@@ -21,7 +21,7 @@
 --------------
 react架构规范
 
-- [react-cli 脚手架](http://code.tfedu.net/frontend/react-cli)
+- [react-cli 脚手架](rules/react-cli.md) 
 
 vuejs架构规范
 

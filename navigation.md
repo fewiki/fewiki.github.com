@@ -1,6 +1,7 @@
 [主页](index.md)
 [前端wiki](articles/wiki.md)
 [公司相关](articles/company.md)
+[文档宝库](articles/collection.md)
 [前端规范](articles/frontend-rules.md)
 [前端工具](articles/tools.md)
 
